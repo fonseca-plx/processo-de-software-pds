@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Processo de Desenvolvimento de Software - PDS Corporativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Processo de Desenvolvimento de Software</h1>
+        <nav>
+            <ul>
+                <li><a href="#visao-geral">Visão Geral</a></li>
+                <li><a href="#diagrama">Diagrama de Atividades</a></li>
+                <li><a href="#atividades">Descrição das Atividades</a></li>
+                <li><a href="#papeis">Papéis e Responsabilidades</a></li>
+                <li><a href="#praticas">Práticas Ágeis Aplicadas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="visao-geral">
+            <h2>Visão Geral</h2>
+            <p>
+                Este processo de desenvolvimento foi projetado para uma equipe enxuta, com
+                disponibilidade de horários variáveis, priorizando comunicação assíncrona,
+                organização do fluxo de trabalho e redução de retrabalho.
+            </p>
+            <p>
+                O modelo combina práticas de <strong>Kanban</strong> para gestão contínua,
+                <strong>Design First</strong> para validação técnica antecipada e uma
+                esteira de <strong>CI/CD</strong> que automatiza testes e implantação.
+            </p>
+        </section>
+
+        <section id="diagrama">
+            <h2>Diagrama de Atividades</h2>
+            <p>
+                O fluxo abaixo representa o processo de desenvolvimento de software adotado pela equipe,
+                desde o planejamento até a conclusão da entrega. O diagrama foi modelado como um
+                <strong>flowchart</strong> utilizando <strong>Mermaid</strong>, permitindo fácil manutenção
+                e versionamento junto ao código.
+            </p>
+
+
+            <div class="mermaid">
+                flowchart TD
+                A[Início<br />Reunião Semanal] --> B[Definição de Prioridades]
+                B --> C[Backlog]
+                C --> D[Seleção da Tarefa]
+
+
+                D --> E[Análise e Design Prévio]
+                E --> F[Desenvolvimento<br />Feature Branch + Testes Locais]
+
+
+                F --> G[Pull Request]
+                G --> H{Code Review<br />Aprovado?}
+
+
+                H -- Não --> F
+                H -- Sim --> I[Merge na Branch Principal]
+
+
+                I --> J[Pipeline CI/CD]
+                J --> K[Testes Automatizados]
+                K --> L[Build e Deploy<br />Homologação]
+
+
+                L --> M[Conclusão<br />Done]
+            </div>
+        </section>
+
+        <section id="atividades">
+            <h2>Descrição das Atividades</h2>
+
+            <h3>A. Planejamento e Alinhamento</h3>
+            <ul>
+                <li>Reunião semanal única</li>
+                <li>Review das entregas anteriores</li>
+                <li>Planejamento e priorização do backlog</li>
+                <li>Discussão de impedimentos técnicos</li>
+            </ul>
+
+            <h3>B. Análise e Design</h3>
+            <ul>
+                <li>Documentação técnica antes do código</li>
+                <li>Definição de contratos de API e modelagem de dados</li>
+                <li>Redução de retrabalho</li>
+            </ul>
+
+            <h3>C. Desenvolvimento e Testes Locais</h3>
+            <ul>
+                <li>Uso de feature branches</li>
+                <li>Implementação acompanhada de testes unitários</li>
+            </ul>
+
+            <h3>D. Revisão de Código</h3>
+            <ul>
+                <li>Pull Request assíncrono</li>
+                <li>Revisão por outro membro da equipe</li>
+                <li>Validação do código e da documentação</li>
+            </ul>
+
+            <h3>E. Pipeline Automatizado (CI/CD)</h3>
+            <ul>
+                <li>Execução automática de testes</li>
+                <li>Verificação de conflitos</li>
+                <li>Deploy em ambiente de homologação</li>
+            </ul>
+        </section>
+
+        <section id="papeis">
+            <h2>Papéis e Responsabilidades</h2>
+            <ul>
+                <li><strong>Product Owner / Líder:</strong> gerencia o backlog, define prioridades e valida entregas.
+                </li>
+                <li><strong>Desenvolvedor Full Stack:</strong> atua em análise, desenvolvimento, testes e code review.
+                </li>
+                <li><strong>Engenheiro DevOps:</strong> mantém infraestrutura, CI/CD e monitora o sistema.</li>
+            </ul>
+        </section>
+
+        <section id="praticas">
+            <h2>Práticas Ágeis Aplicadas</h2>
+            <ul>
+                <li><strong>Kanban:</strong> fluxo contínuo e limitação de WIP.</li>
+                <li><strong>Design Up-Front Ágil:</strong> documentação técnica obrigatória.</li>
+                <li><strong>CI/CD:</strong> automação total de testes e deploy.</li>
+                <li><strong>Peer Review:</strong> qualidade e compartilhamento de conhecimento.</li>
+                <li><strong>Feature Branch Workflow:</strong> trabalho paralelo seguro.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PDS Corporativo • Processo de Desenvolvimento de Software</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default'
+        });
+    </script>
+
+</body>
+
+</html>

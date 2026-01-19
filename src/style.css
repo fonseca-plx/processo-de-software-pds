@@ -1,0 +1,105 @@
+:root {
+    --primary: #1f3a5f;
+    --secondary: #3a6ea5;
+    --light: #f4f6f8;
+    --dark: #1a1a1a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+header {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-evenly;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+.mermaid {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+
+section {
+    background: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+.fluxo {
+    background-color: var(--light);
+    padding: 1rem;
+    border-left: 4px solid var(--secondary);
+    font-family: "Courier New", monospace;
+    margin-top: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary);
+    color: #fff;
+    margin-top: 3rem;
+}
